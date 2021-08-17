@@ -1,0 +1,267 @@
+.card {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  min-height: 3rem;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--black2);
+  box-shadow: var(--shadow);
+}
+
+.card:first-child {
+  margin-top: 0;
+}
+
+.card:last-child {
+  margin-bottom: 1rem;
+}
+
+.button__container {
+  width: 100%;
+  display: flex;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: none;
+  border: none;
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  cursor: pointer;
+  transition: ease var(--transition-duration);
+}
+
+.button:hover {
+  background-color: var(--black2);
+}
+.task__container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1rem;
+}
+
+.task {
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.date {
+  margin: 0;
+  padding: 0;
+
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+.day {
+  font-weight: 700;
+  color: var(--black);
+}
+
+.checkbox {
+  margin-left: 1rem;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--black2);
+  border-radius: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ease var(--transition-duration);
+  transition-property: background-color, border-radius, margin-left;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--black2);
+  transition: ease var(--transition-duration);
+}
+
+.completed__checkbox {
+  border: none;
+  background-color: var(--blue);
+  border-radius: 50%;
+}
+
+.completed__icon {
+  color: var(--white);
+}
+
+.completed__task {
+  color: var(--black1);
+  text-decoration: line-through;
+}
+
+.disclosure {
+  color: red;
+}
+
+.edit__button {
+  width: 48px;
+  height: 100%;
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: ease var(--transition-duration);
+  position: relative;
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  /* border-left: 1px solid var(--black2); */
+}
+
+.edit__button:hover {
+  background-color: var(--black2);
+}
+
+.edit__button:hover .edit__button__icon {
+  color: var(--black);
+}
+
+.edit__button__icon {
+  color: var(--gray);
+  width: 16px;
+  height: 16px;
+  transition: ease var(--transition-duration);
+}
+
+.disclosure__button__icon__open {
+  transform: rotate(180deg);
+}
+
+.disclosure__panel {
+  background-color: var(--white);
+  width: 100%;
+  right: 0%;
+  bottom: -0.5rem;
+  transform: translateY(100%);
+  position: absolute;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  z-index: 9999;
+}
+
+.form {
+  margin: 0 1rem;
+  width: 100%;
+}
+
+.form__title {
+  color: var(--blue);
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.input {
+  display: inline-block;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 1rem;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  border: 1px solid var(--black2);
+  transition: ease var(--transition-duration);
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.input:focus {
+  padding-left: 1.5rem;
+}
+
+.input::placeholder {
+  color: var(--black1);
+  font-weight: 400;
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-top: 1rem;
+}
+
+.form__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0.25rem;
+  height: 3rem;
+  width: 5rem;
+  background: var(--black2);
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: none;
+  color: var(--gray);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: ease var(--transition-duration);
+}
+
+.form__button__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.form__button:first-child {
+  margin-left: 0;
+}
+
+.form__button:last-child {
+  margin-right: 0;
+}
+
+.form__button:hover {
+  transform: translateY(-0.125rem);
+  color: var(--black);
+  box-shadow: var(--shadow);
+}
+
+.form__button__confirm {
+  background-color: var(--blue);
+  color: var(--white3);
+}
+
+.form__button__confirm:hover {
+  color: var(--white);
+}
+
+.form__button__delete {
+  background-color: var(--red);
+  color: var(--white3);
+  margin-left: auto;
+}
+
+.form__button__delete:hover {
+  color: var(--white);
+}
+
+.form__button__container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5rem 0;
+}
